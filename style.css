@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+:root {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", sans-serif;
+}
+
+header {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to right bottom,
+    rgb(8, 145, 178) 50%,
+    transparent 50%
+  );
+  background-position: right middle;
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+}
+
+.personal-picture {
+  position: relative;
+}
+
+.personal-picture > h1 {
+  width: 100%;
+  color: white;
+  font-weight: 100;
+  font-size: 3rem;
+  text-align: center;
+  position: absolute;
+  bottom: 4px;
+}
+
+.personal-picture img {
+  box-shadow: 1px 1px 14px #4d4d4d;
+  height: 400px;
+}
+
+.about {
+  padding: 0 24px;
+  background-color: white;
+  box-shadow: 1px 1px 14px #4d4d4d;
+}
+
+.about > h2 {
+  font-size: 2rem;
+}
+
+.about > * {
+  margin: 24px 0;
+}
+
+.social-sites-links {
+  margin: 32px 0 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+@media (max-width: 1200px) {
+  header {
+    padding: 32px;
+    flex-direction: column;
+  }
+
+  .personal-picture > h1 {
+    text-align: start;
+    left: 8px;
+    font-size: 4rem;
+  }
+
+  .about {
+    text-align: center;
+    box-shadow: none;
+  }
+  .about > p {
+    text-align: start;
+  }
+
+  .social-sites-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    padding: 0;
+  }
+
+  .personal-picture h1 {
+    font-size: 4rem;
+  }
+}
+
+main {
+  padding: 64px;
+}
+
+main > h2 {
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.projects-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 4px lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.screenshot {
+  padding: 64px 32px;
+  font-size: 2rem;
+  font-family: "Playfair Display", sans-serif;
+  text-align: center;
+  color: white;
+  background-color: rgb(134, 0, 0);
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details {
+  padding: 12px 24px 64px;
+  flex: 1;
+}
+
+a {
+  color: inherit;
+}
+
+.project-heading-and-links {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-heading-and-links span {
+  display: flex;
+  gap: 12px;
+}
+
+.screenshot {
+  background-color: #9e1c1c;
+}
+
+.project-card:nth-child(2) .screenshot {
+  background-color: #7c75ca;
+}
+
+.project-card:nth-child(3) .screenshot {
+  background-color: #c363b4;
+}
+
+.project-card:nth-child(4) .screenshot {
+  background-color: #d88f39;
+}
+
+.project-card:nth-child(5) .screenshot {
+  background-color: #7c75ca;
+}
+
+.project-card:nth-child(6) .screenshot {
+  background-color: #5e8f4d;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 16px;
+  }
+
+  main > h2 {
+    margin: 16px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    padding: 8px 0;
+  }
+}
+
+footer {
+  padding: 48px 64px;
+  background-color: rgb(8, 145, 178);
+  color: white;
+  display: flex;
+  gap: 48px;
+}
+
+.contact-details {
+  flex: 1;
+}
+
+.contact-details h2 {
+  margin-bottom: 24px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.address {
+  margin: 24px 0;
+}
+
+.phone,
+.email {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-details .social-sites-links {
+  justify-content: flex-start;
+}
+
+@media (max-width: 1200px) {
+  footer {
+    padding: 32px 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 16px 16px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .contact-details h2 {
+    text-align: center;
+  }
+
+  .contact-details .social-sites-links {
+    justify-content: center;
+  }
+}
+
+.contact-details img {
+  width: 20px;
+}
